@@ -7,9 +7,7 @@ export class FoldersController {
   constructor(private folderRepository: FolderRespository) {}
   @Post()
   async create(@Body() body: CreateFolderDto) {
-    const { name } = body;
-    const folder = await this.folderRepository.create(name);
-    return folder;
+    await this.folderRepository.create(body);
   }
 
   @Get()
