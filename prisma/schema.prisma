@@ -11,6 +11,7 @@ datasource db {
 }
 
 model Folder {
-  id   String @id
-  name String
+  id          String @id
+  name        String
+  qtdContacts Int    @default(0)
 }
