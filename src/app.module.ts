@@ -6,10 +6,11 @@ import { PrismaFolderRepository } from './repositories/prisma/PrismaFolderReposi
 import { ContactsController } from './contacts/contacts.controller';
 import { ContactRepository } from './repositories/ContactRepository';
 import { PrismaContactRepository } from './repositories/prisma/PrismaContactRepository';
+import { AppController } from './app.controller';
 
 @Module({
   imports: [],
-  controllers: [FoldersController, ContactsController],
+  controllers: [FoldersController, ContactsController, AppController],
   providers: [
     PrismaService,
     {
